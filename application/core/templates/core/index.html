@@ -1,0 +1,13 @@
+{% extends 'confined.html' %}
+{% block webtitle %}Unilay 5{% endblock %}
+
+{% block main %}
+<div class="spacer-medium"></div>
+<div class="lined rounded block confined">
+  <form method="post">
+    {{ form.hidden_tag() }}
+    {{ form.file.label }}{{ form.file }}
+    {{ form.submit() }}
+  </form>
+</div>
+{% endblock %}
