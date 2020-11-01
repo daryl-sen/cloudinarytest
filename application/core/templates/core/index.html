@@ -4,7 +4,7 @@
 {% block main %}
 <div class="spacer-medium"></div>
 <div class="lined rounded block confined">
-  <form method="post">
+  <form method="post" enctype="multipart/form-data">
     {{ form.hidden_tag() }}
     {{ form.file.label }}{{ form.file }}
     {{ form.submit() }}
