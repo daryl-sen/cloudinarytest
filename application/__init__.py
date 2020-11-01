@@ -1,22 +1,10 @@
 from flask import Flask
-from dotenv import load_dotenv
-
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
 
+from pathlib import Path
+envpath = Path('.') / 'application'
 load_dotenv()
-
-cloudinary_vars = {
-    'CLOUDINARY_NAME': os.getenv('CLOUDINARY_NAME'), 
-    'CLOUDINARY_API_KEY': os.getenv('CLOUDINARY_API_KEY'), 
-    'CLOUDINARY_API_SECRET': os.getenv('CLOUDINARY_API_SECRET')
-}
-
-# inside .env
-# export SECRET_KEY=value
-# export CLOUDINARY_API_KEY=value
-# export CLOUDINARY_API_SECRET=value
-# export CLOUDINARY_NAME=value
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
